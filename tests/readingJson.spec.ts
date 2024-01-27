@@ -4,7 +4,7 @@ import * as orangeHrmData from './testData/orangeHRMCredentials.json'
 test(`Login test with valid credentials`, async ({ page }) => {
   await page.goto("https://opensource-demo.orangehrmlive.com");
   await page.locator('[name="username"]').fill(orangeHrmData.validUserName);
-  await page.locator('[name="password"]').fill(orangeHrmData.validPassword);
+  await page.locator('[name="passwords"]').fill(orangeHrmData.validPassword);
 
   await page.locator('//button[@type="submit"]').click();
   await page.locator(".oxd-userdropdown-tab").click();

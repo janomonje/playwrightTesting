@@ -3,14 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "clean:reports": "rm -rf allure-report allure-results && mkdir -p allure-report allure-results",
+    "generate:reports": "npx allure generate ./allure-results/ --clean",
+    "open:reports": "npx allure open ./allure-report",
+    "pretest": "npm run clean:reports",
+    "posttest": "npm run generate:reports && npm run open:reports",
+    "execute:script": "npx playwright test loginTest.spec.ts --project=chrome",
+    "test": "npm run execute:script || npm run posttest"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.3",
+    "allure-commandline": "^2.26.0",
+    "allure-playwright": "^2.11.1",
     "csv-parse": "^5.5.3",
-    "luxon": "^3.4.4"
+    "luxon": "^3.4.4",
+    "mkdir": "^0.0.2",
+    "rimraf": "^5.0.5"
   }
 }

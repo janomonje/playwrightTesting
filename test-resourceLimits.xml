@@ -1,0 +1,61 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="10.830401">
+<testsuite name="readingJson.spec.ts" timestamp="2024-01-26T09:28:57.402Z" hostname="chrome" tests="2" failures="1" skipped="0" time="14.69" errors="0">
+<testcase name="Login test with valid credentials" classname="readingJson.spec.ts" time="9.999">
+<failure message="readingJson.spec.ts:4:5 Login test with valid credentials" type="FAILURE">
+<![CDATA[  [chrome] › readingJson.spec.ts:4:5 › Login test with valid credentials ───────────────────────────
+
+    Test timeout of 10000ms exceeded.
+
+    Error: locator.fill: Test timeout of 10000ms exceeded.
+    Call log:
+      - waiting for locator('[name="passwords"]')
+
+
+       5 |   await page.goto("https://opensource-demo.orangehrmlive.com");
+       6 |   await page.locator('[name="username"]').fill(orangeHrmData.validUserName);
+    >  7 |   await page.locator('[name="passwords"]').fill(orangeHrmData.validPassword);
+         |                                            ^
+       8 |
+       9 |   await page.locator('//button[@type="submit"]').click();
+      10 |   await page.locator(".oxd-userdropdown-tab").click();
+
+        at /home/ale/Documents/Playwright/tests/readingJson.spec.ts:7:44
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/readingJson-Login-test-with-valid-credentials-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/readingJson-Login-test-with-valid-credentials-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/readingJson-Login-test-with-valid-credentials-chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/readingJson-Login-test-with-valid-credentials-chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/readingJson-Login-test-with-valid-credentials-chrome/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/readingJson-Login-test-with-valid-credentials-chrome/video.webm]]
+
+[[ATTACHMENT|test-results/readingJson-Login-test-with-valid-credentials-chrome/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login test with invalid credentials" classname="readingJson.spec.ts" time="4.691">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/readingJson-Login-test-with-invalid-credentials-chrome/video.webm]]
+
+[[ATTACHMENT|test-results/readingJson-Login-test-with-invalid-credentials-chrome/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

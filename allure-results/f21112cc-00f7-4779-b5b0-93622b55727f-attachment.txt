@@ -1,0 +1,5 @@
+{
+  name: 'automation',
+  job: 'course',
+  updatedAt: '2024-01-27T09:04:23.266Z'
+}

@@ -1,0 +1,218 @@
+{
+  "config": {
+    "configFile": "/home/ale/Documents/Playwright/playwright.config.ts",
+    "rootDir": "/home/ale/Documents/Playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": [
+      {},
+      {}
+    ],
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/ale/Documents/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/ale/Documents/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/home/ale/Documents/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/ale/Documents/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/home/ale/Documents/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/ale/Documents/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/home/ale/Documents/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "/home/ale/Documents/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.40.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "readingJson.spec.ts",
+      "file": "readingJson.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login test with valid credentials",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 9999,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 10000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 10000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/ale/Documents/Playwright/tests/readingJson.spec.ts",
+                        "column": 44,
+                        "line": 7
+                      },
+                      "message": "Error: locator.fill: Test timeout of 10000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('[name=\"passwords\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://opensource-demo.orangehrmlive.com\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"username\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(orangeHrmData\u001b[33m.\u001b[39mvalidUserName)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"passwords\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(orangeHrmData\u001b[33m.\u001b[39mvalidPassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//button[@type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\".oxd-userdropdown-tab\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /home/ale/Documents/Playwright/tests/readingJson.spec.ts:7:44\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-26T09:23:37.221Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/ale/Documents/Playwright/test-results/readingJson-Login-test-with-valid-credentials-chrome/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/ale/Documents/Playwright/test-results/readingJson-Login-test-with-valid-credentials-chrome/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/ale/Documents/Playwright/test-results/readingJson-Login-test-with-valid-credentials-chrome/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fa79f254363f25f2ee90-0900b87f85cb9ccb2d73",
+          "file": "readingJson.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "Login test with invalid credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 4177,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-26T09:23:37.221Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/ale/Documents/Playwright/test-results/readingJson-Login-test-with-invalid-credentials-chrome/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/ale/Documents/Playwright/test-results/readingJson-Login-test-with-invalid-credentials-chrome/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa79f254363f25f2ee90-abc86db5b4143f72bf32",
+          "file": "readingJson.spec.ts",
+          "line": 15,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-01-26T09:23:36.974Z",
+    "duration": 10911.239,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

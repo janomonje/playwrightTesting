@@ -10,10 +10,10 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  //timeout: 10 * 1000,
+  timeout: 10 * 1000,
   testDir: "./tests",
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -22,7 +22,23 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
+
+  //#########################################3
+  reporter: [["html"], ["allure-playwright"]],
+  /* [
+    [
+      "html",
+      {
+        outputFolder: "my-report",
+        open: "never",
+        host: "0.0.0.0",
+        port: "9333",
+      },
+    ],
+  ],
+  "[["junit", { outputFile: "test-resourceLimits.xml" }]]","[["json",{outputFile: "test-results.json",}]]", "null", "dot", "line"*/
+
+  //##############################################3
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -31,7 +47,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on",
     screenshot: "only-on-failure", // on, off, only-on-failure
-    video: "on", // off, on, on-first-retry, reatain-on-failure, retry-with-video
+    //video: "on", // off, on, on-first-retry, reatain-on-failure, retry-with-video
   },
   //grep: [new RegExp("@smoke"), new RegExp("@sanity")],
   grepInvert: [new RegExp("@smoke"), new RegExp("@sanity")],
