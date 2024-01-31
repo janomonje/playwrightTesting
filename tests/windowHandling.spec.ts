@@ -35,7 +35,7 @@ test("Single window handling", async ({ page }) => {
   page.close();
 });
 
-test.only("Multiple tab handling", async ({ page }) => {
+test("Multiple tab handling", async ({ page }) => {
   await page.goto("https://demo.automationtesting.in/Windows.html");
   await page.locator('.analystic[href="#Multiple"]').click();
 

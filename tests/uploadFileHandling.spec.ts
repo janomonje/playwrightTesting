@@ -15,7 +15,7 @@ test("Upload multiple files - approach 1", async ({ page }) => {
   await page.close();
 });
 
-test.only("Upload multiple files - approach 2", async ({ page }) => {
+test("Upload multiple files - approach 2", async ({ page }) => {
   await page.goto("https://blueimp.github.io/jQuery-File-Upload/");
 
   await page.setInputFiles('input[name="files[]"]', [

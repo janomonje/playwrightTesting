@@ -67,7 +67,7 @@ test("Assertion using title", async ({ page }) => {
 });
 
 // Screenshot assertion
-test.only("Screenshot assertion", async ({ page }) => {
+test("Screenshot assertion", async ({ page }) => {
   await page.goto("https://opensource-demo.orangehrmlive.com/");
   await page.waitForTimeout(500);
   await expect(page).toHaveScreenshot();

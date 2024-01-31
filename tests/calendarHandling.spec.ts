@@ -12,7 +12,7 @@ test("Calaendar handling", async ({ page }) => {
 });
 
 // luxon library needs to be install
-test.only("Using luxon", async ({ page }) => {
+test("Using luxon", async ({ page }) => {
   await page.goto(
     "https://www.lambdatest.com/selenium-playground/bootstrap-date-picker-demo"
   );

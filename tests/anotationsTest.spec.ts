@@ -41,6 +41,6 @@ test("Slow test with condition", async ({ page, browserName }) => {
   );
 });
 
-test.only("Only test", async ({ page, browserName }) => {
+test("Only test", async ({ page, browserName }) => {
   console.log('This is a "only" test');
 });

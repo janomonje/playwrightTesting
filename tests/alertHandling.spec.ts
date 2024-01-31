@@ -87,7 +87,7 @@ test("Confirmation alert - button Cancel", async ({ page }) => {
 
 /*###########################################################################################*/
 
-test.only("Confirmation alert - Prompt ok button", async ({ page }) => {
+test("Confirmation alert - Prompt ok button", async ({ page }) => {
   await page.goto("https://the-internet.herokuapp.com/javascript_alerts");
 
   // Click on alert button
@@ -113,7 +113,7 @@ test.only("Confirmation alert - Prompt ok button", async ({ page }) => {
 
 /*###########################################################################################*/
 
-test.only("Confirmation alert - Promt cancel button", async ({ page }) => {
+test("Confirmation alert - Promt cancel button", async ({ page }) => {
   await page.goto("https://the-internet.herokuapp.com/javascript_alerts");
 
   // Click on alert button

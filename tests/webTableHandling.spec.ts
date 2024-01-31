@@ -83,7 +83,7 @@ test("Printing all items from Page 1 in Pagination Table", async ({ page }) => {
 
 /*###########################################################################################*/
 
-test.only("Printing all items from all pages Pagination Table", async ({
+test("Printing all items from all pages Pagination Table", async ({
   page,
 }) => {
   await page.goto("https://testautomationpractice.blogspot.com/");

@@ -14,7 +14,7 @@ test("Dra and drop 1", async ({ page }) => {
   await page.close();
 });
 
-test.only("Dra and drop 2", async ({ page }) => {
+test("Dra and drop 2", async ({ page }) => {
   await page.goto(
     "http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html"
   );

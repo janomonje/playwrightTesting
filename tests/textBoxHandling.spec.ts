@@ -20,7 +20,7 @@ test("Press sequentially method", async ({ page }) => {
   await page.close;
 });
 
-test.only("Press sequentially method with delay", async ({ page }) => {
+test("Press sequentially method with delay", async ({ page }) => {
   await page.goto("https://opensource-demo.orangehrmlive.com");
   await page
     .locator('[name="username"]')
