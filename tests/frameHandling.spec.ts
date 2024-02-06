@@ -28,7 +28,7 @@ test("Frame handling using Page.FrameLocator()", async ({ page }) => {
 
 /*###########################################################################################*/
 
-test.only("Nested fram handling", async ({ page }) => {
+test("Nested fram handling", async ({ page }) => {
   await page.goto("https://ui.vision/demo/webtest/frames/");
   const frame3 = page.frame({
     url: "https://ui.vision/demo/webtest/frames/frame_3.html",

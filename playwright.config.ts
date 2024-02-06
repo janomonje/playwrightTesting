@@ -68,10 +68,10 @@ export default defineConfig({
       use: { ...devices["Desktop Safari"] },
     },
 
-    {
-      name: "chrome",
-      use: { ...devices["Desktop Chrome"] },
-    },
+    // {
+    //   name: "chrome",
+    //   use: { ...devices["Desktop Chrome"] },
+    // },
 
     /* Test against mobile viewports. */
     // {

@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jan 28 08:19:04 EET 2024","Sun Jan 28 08:19:12 EET 2024","8065","chrome","loginTest.spec.ts","","","","Login test for Orange HRM",""
+"passed","Mon Feb 05 15:56:44 EET 2024","Mon Feb 05 15:56:51 EET 2024","6971","chromium","loginTest.spec.ts","","","","Login test for Orange HRM",""
